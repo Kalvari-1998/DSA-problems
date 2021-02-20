@@ -1,0 +1,23 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String s = scan.next();
+		char[] arr = s.toCharArray();
+
+		int left;
+		int right=arr.length-1;
+
+		for(left=0;left<right;left++,right--){
+			char temp=arr[left];
+			arr[left]=arr[right];
+			arr[right]=temp;
+		}
+		for(char c : arr){
+			System.out.println(c);
+		}
+		}
+	}
